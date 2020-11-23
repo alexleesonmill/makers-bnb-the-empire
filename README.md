@@ -12,4 +12,13 @@
 
 ## User Stories
 
-[![User Stories](https://trello.com/b/fBNwccl8/user-stories)](https://trello.com/b/fBNwccl8/user-stories)
+[Link to Trello User Stories Board](https://trello.com/b/fBNwccl8/user-stories)
+
+- As a user, So that I can see all/list properties I would like to be able to sign up for Makers BNB
+- As a user, so that I can find a property, I would like to be able to see a list of all properties I can book
+- As a user, so that I can list a property, I would like to be able to become a 'host'
+- As a user, so that I can have a place to stay, I would like to be able book a property
+- As a user, so that I can confirm my booking, I would like to receive a confirmation from the host
+- As a host, so that I can manage all my properties, I would like to be able to add multiple properties
+- As a host, so a user can book my space, I would like to provide details about my space(description, price, location)
+- As a host, so that users can book my property, I would like to be able to approve the request
