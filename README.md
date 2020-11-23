@@ -22,3 +22,9 @@
 - As a host, so that I can manage all my properties, I would like to be able to add multiple properties
 - As a host, so a user can book my space, I would like to provide details about my space(description, price, location)
 - As a host, so that users can book my property, I would like to be able to approve the request
+
+## Model Diagrams
+
+#### CRC Diagram
+
+![image](https://user-images.githubusercontent.com/65397514/99977050-1a0ade00-2d9c-11eb-9337-45c21ff18eb6.png)
