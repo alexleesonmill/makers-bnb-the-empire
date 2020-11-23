@@ -26,3 +26,5 @@
 ## Model Diagrams
 
 #### CRC Diagram
+
+![image](https://user-images.githubusercontent.com/65397514/99977050-1a0ade00-2d9c-11eb-9337-45c21ff18eb6.png)
