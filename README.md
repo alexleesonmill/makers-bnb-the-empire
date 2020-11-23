@@ -12,4 +12,4 @@
 
 ## User Stories
 
-[![User Stories](https://trello.com/b/fBNwccl8/user-stories)]
+[![User Stories](https://trello.com/b/fBNwccl8/user-stories)](https://trello.com/b/fBNwccl8/user-stories)
