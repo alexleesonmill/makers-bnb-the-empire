@@ -10,14 +10,17 @@
     <h1> MakersBnB </h1>
   </div>
 
-<div>
-  <ul>
-    <li>
-      <a href="/users/new">Sign Up</a>
-    </li>
-  </ul>
-</div>
+  <% if @user %>
+    <h3> Welcome, <%= @user.name %> </h3>
+  <% end %>
 
+  <div>
+    <ul>
+      <li>
+        <a href="/users/new">Sign Up</a>
+      </li>
+    </ul>
+  </div>
 
 </body>
 

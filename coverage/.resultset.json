@@ -11,9 +11,12 @@
           1,
           1,
           1,
+          1,
+          1,
           null,
           1,
-          1,
+          0,
+          0,
           null,
           null
         ]
@@ -37,8 +40,32 @@
           null,
           null
         ]
+      },
+      "/Users/malachispencer/coding/makers/makers-bnb-the-empire/spec/unit/user_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1606221205
+    "timestamp": 1606228924
   }
 }

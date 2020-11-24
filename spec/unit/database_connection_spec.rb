@@ -10,7 +10,7 @@ describe DatabaseConnection do
     it 'calls the exec method with the sql passed in' do
       connection = DatabaseConnection.setup('makers_bnb_test')
       expect(connection).to receive(:exec).with('SELECT * FROM users;')
-      DatabaseConnection.query(sql: 'SELECT * FROM users;')
+      DatabaseConnection.query('SELECT * FROM users;')
     end
   end
 end

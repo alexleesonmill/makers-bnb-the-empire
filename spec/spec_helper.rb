@@ -7,6 +7,7 @@ require 'pg'
 require_relative '../controllers/app.rb'
 require_relative './setup_test_database.rb'
 require_relative '../lib/database_connection.rb'
+require_relative '../lib/user.rb'
 
 Capybara.app = MakersBnB
 
