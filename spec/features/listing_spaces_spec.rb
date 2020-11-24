@@ -7,7 +7,7 @@ feature "displaying spaces on MakersBnB" do
   end
 
   scenario "display the listings list on /listings route" do
-    Spaces.create(description: "A luxurious villa in Beverly Hills", name: "Hidden Gem of Beverly Hills", location: "Los Angeles, Beverly Hills", price: 300)
+    Space.create(description: "A luxurious villa in Beverly Hills", name: "Hidden Gem of Beverly Hills", location: "Los Angeles, Beverly Hills", price: 300)
     visit '/listings'
     expect(page).to have_content("Hidden Gem of Beverly Hills")
     expect(page).to have_content("A luxurious villa in Beverly Hills")
