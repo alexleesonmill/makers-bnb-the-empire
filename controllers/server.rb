@@ -6,6 +6,7 @@ class MakersBnB < Sinatra::Base
   register Sinatra::Flash
 
   get '/' do
+    @user = User.find(id: session[:user_id])
     erb(:index)
   end
 end

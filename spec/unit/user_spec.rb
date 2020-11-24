@@ -9,6 +9,12 @@ describe User do
   end
 
   describe '.find' do
+    it 'returns nil if id is given as nil' do
+      user = User.create(name: 'Malachi', email: 'm.spencer@makers.com', password: 'p20201124')
+
+      expect(User.find(id: nil)).to be_nil
+    end
+
     it 'retrieves user from db by id' do
       user = User.create(name: 'Malachi', email: 'm.spencer@makers.com', password: 'p20201124')
       found_user = User.find(id: user.id)
