@@ -1,6 +1,47 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/constantine_quantum/Projects/makers-bnb-the-empire/spec/features/listing_spaces_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          null,
+          null
+        ]
+      },
+      "/Users/constantine_quantum/Projects/makers-bnb-the-empire/spec/unit/database_connection_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
       "/Users/constantine_quantum/Projects/makers-bnb-the-empire/spec/unit/spaces_spec.rb": {
         "lines": [
           1,
@@ -11,6 +52,10 @@
           1,
           null,
           null,
+          1,
+          1,
+          1,
+          1,
           1,
           1,
           1,
@@ -26,23 +71,23 @@
           1,
           null,
           1,
-          1,
-          1,
-          1,
-          1,
+          2,
+          2,
+          2,
+          2,
           null,
           null,
           1,
-          1,
-          1,
-          1,
+          2,
+          2,
+          2,
           null,
-          1,
+          2,
           null,
           null
         ]
       }
     },
-    "timestamp": 1606222711
+    "timestamp": 1606226427
   }
 }
