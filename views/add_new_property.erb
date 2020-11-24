@@ -1,0 +1,26 @@
+<head>
+  <style>
+    textarea {vertical-align: top;}
+  </style>
+</head>
+
+<body>
+<h1>List your property on MakersBnB</h1>
+
+<form action="/listings/new" method="POST">
+<label for="property_name">Property Name</label>
+<input id="property_name" type="text" name="property_name" placeholder="Enter the name of your space">
+<br><br>
+<label for="property_description">Property Description</label>
+<textarea id="property_description"  name="property_description" placeholder="Write a description. Sell your space to potential renters!"
+rows="4" cols="50"></textarea>
+<br><br>
+<label for="property_location">Property Location</label>
+<input id="property_location" type="text" name="property_location" placeholder="Where is your space?">
+<br><br>
+<label for="property_price">Property Price</label>
+<input id="property_price" type="text" name="property_price" placeholder="Set your nightly price">
+<br><br>
+<input type="submit" value="Post">
+</form>
+</body>
