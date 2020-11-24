@@ -23,7 +23,13 @@ class MakersBnB < Sinatra::Base
       email: params['email'],
       password: params['password']
     )
-    session[:user_id] = user.id
-    redirect('/')
+
+    if user
+      session[:user_id] = user.id
+      redirect('/')
+    else
+      flash[:notice] = 'Login details incorrect - please try again'
+      redirect('/sessions/new')
+    end
   end
 end

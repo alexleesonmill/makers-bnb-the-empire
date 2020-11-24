@@ -39,6 +39,8 @@ class User
       WHERE email = '#{email}';"
     ).first
 
+    return nil unless result
+
     User.new(id: result['id'], name: result['name'], email: result['email'])
   end
 end
