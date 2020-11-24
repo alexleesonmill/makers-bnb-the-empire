@@ -2,9 +2,9 @@ feature 'registration' do
   scenario 'user visis home and signs up' do
     visit('/')
     click_link('Sign Up')
-    fill_in('name', 'Malachi')
-    fill_in('email', 'm.spencer@makers.com')
-    fill_in('password', 'p20201124')
+    fill_in('name', with: 'Malachi')
+    fill_in('email', with: 'm.spencer@makers.com')
+    fill_in('password', with: 'p20201124')
     click_button('Submit')
 
     expect(current_path).to eq('/')

@@ -1,3 +1,3 @@
-require_relative './controllers/app.rb'
+require_relative './app.rb'
 
 run MakersBnB
