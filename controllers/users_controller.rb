@@ -19,6 +19,11 @@ class MakersBnB < Sinatra::Base
   end
 
   post '/sessions' do
-    
+    user = User.authenticate(
+      email: params['email'],
+      password: params['password']
+    )
+    session[:user_id] = user.id
+    redirect('/')
   end
 end
