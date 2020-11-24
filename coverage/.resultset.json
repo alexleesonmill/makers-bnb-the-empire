@@ -1,6 +1,23 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/malachispencer/coding/makers/makers-bnb-the-empire/spec/features/registration_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          null
+        ]
+      },
       "/Users/malachispencer/coding/makers/makers-bnb-the-empire/spec/unit/database_connection_spec.rb": {
         "lines": [
           1,
@@ -22,6 +39,6 @@
         ]
       }
     },
-    "timestamp": 1606148532
+    "timestamp": 1606218879
   }
 }
