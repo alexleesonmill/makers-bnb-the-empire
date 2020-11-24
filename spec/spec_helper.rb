@@ -4,9 +4,9 @@ require 'capybara/rspec'
 require 'simplecov'
 require 'simplecov-console'
 require 'pg'
-require_relative '../app.rb'
-require_relative './setup_test_database.rb'
-require_relative '../lib/database_connection.rb'
+require_relative '../controllers/app'
+require_relative './setup_test_database'
+require_relative '../lib/database_connection'
 
 Capybara.app = MakersBnB
 
