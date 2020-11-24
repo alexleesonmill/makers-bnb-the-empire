@@ -32,4 +32,10 @@ class MakersBnB < Sinatra::Base
       redirect('/sessions/new')
     end
   end
+
+  post '/sessions/destroy' do
+    session.clear
+    flash[:notice] = 'Succesfully Logged Out'
+    redirect('/')
+  end
 end

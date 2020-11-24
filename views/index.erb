@@ -10,8 +10,11 @@
     <h1> MakersBnB </h1>
   </div>
 
-  <% if !@user.nil? %>
+  <% if @user %>
     <h3> Welcome, <%= @user.name %> </h3>
+    <form action="/sessions/destroy" method="post">
+      <input type="submit" value="Log Out" >
+    </form>
   <% else %>
     <h3> Welcome </h3>
     <div>
@@ -25,7 +28,7 @@
       </ul>
     </div>
   <% end %>
-
+  <%= flash[:notice] %>
 </body>
 
 
