@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css" type="text/css">
+  </head>
+  <body>
+    <header>
+      <h1>
+        MakersBnB Spaces
+      </h1>
+    </header>
+    <main>
+      <section class="display-spaces">
+        <ul>
+          <% @spaces.map { |entry| %>
+          <li><%= entry %></li>
+        </ul>
+          <%} %>
+      </section>
+    </main>
+  </body>
+</html>
