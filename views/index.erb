@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MakersBnb</title>
+</head>
+<body>
+  <div>
+    <h1> MakersBnB </h1>
+  </div>
+
+  <% if !@user.nil? %>
+    <h3> Welcome, <%= @user.name %> </h3>
+  <% else %>
+    <h3> Welcome </h3>
+  <% end %>
+
+  <div>
+    <ul>
+      <li>
+        <a href="/users/new">Sign Up</a>
+      </li>
+    </ul>
+  </div>
+
+</body>
+
+
+
