@@ -18,11 +18,11 @@ class Space
   end
 
   def self.retrieve_available(date = nil)
-    if !date
+    if date.nil?
       result = DatabaseConnection.query("SELECT * FROM spaces;")
     else
-      result = DatabaseConnection.query("SELECT name, description, location, price, user_id FROM spaces JOIN booking ON (spaces.id = booking.space_id)
-                                             WHERE booking.check_in_date = '#{date}' AND booking.booked = FALSE")
+      result = DatabaseConnection.query("SELECT * FROM spaces WHERE id NOT IN ( SELECT space_id FROM bookings
+                                             WHERE check_in = '#{date}' AND booked = TRUE);")
     end
     result.map do |entry|
       Space.new(entry['id'], entry['name'], entry['description'], entry['location'], entry['price'], entry['user_id'])
