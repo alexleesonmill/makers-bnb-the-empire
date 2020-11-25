@@ -38,7 +38,6 @@ class MakersBnB < Sinatra::Base
 
   post '/listings/results' do
     session[:check_in_date] = params[:check_in_date]
-    p session[:check_in_date]
     redirect '/listings'
   end
 end
