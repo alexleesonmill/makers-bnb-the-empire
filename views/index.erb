@@ -18,6 +18,8 @@
     </ul>
   </div>
 
+  <%= flash[:notice] %>
+
   <div>
     <h3> Sign Up </h3>
     <form action="/users" method="post">
@@ -30,16 +32,4 @@
       <input type="submit" value="Submit">
     </form>
   </div>
-  
-  
-  <!--<% if @user %>
-    <h3> Welcome, <%= @user.name %> </h3>
-    <form action="/sessions/destroy" method="post">
-      <input type="submit" value="Log Out" >
-    </form>
-  <% else %>
-    <h3> Welcome </h3>
-    
-  <% end %>
-  <%= flash[:notice] %> -->
 </body>
