@@ -11,7 +11,7 @@ class MakersBnB < Sinatra::Base
     )
 
     session[:user_id] = user.id
-    redirect('/')
+    redirect('/dashboard')
   end
 
   get '/sessions/new' do
