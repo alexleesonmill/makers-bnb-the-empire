@@ -9,4 +9,14 @@ feature 'registration' do
     expect(current_path).to eq('/dashboard')
     expect(page).to have_content('Welcome, Malachi')
   end
+
+  context 'users visits non-home page without logging in' do
+    scenario 'gets redirected to login page' do
+      visit('/listings')
+      expect(current_path).to eq('/sessions/new')
+
+      expect(page).to have_content('Login to Makers BnB')
+      expect(page).to have_link('here', href: '/')
+    end
+  end
 end
