@@ -1,6 +1,3 @@
-require_relative '../../lib/spaces'
-require_relative '../../lib/user'
-
 describe Space do
 
   let(:test_user) { User.create(name: "Jane Doe", email: "jane_doe@gmail.com", password: "12345qwerty") }
@@ -32,7 +29,7 @@ describe Space do
       expect(result.first.name).to eq("Hidden Gem of Beverly Hills")
       expect(result.first.description).to eq("A luxurious villa in Beverly Hills")
       expect(result.first.location).to eq("Los Angeles, Beverly Hills")
-      expect(result.first.price).to eq("300")
+      expect(result.first.price).to eq(300)
       expect(result.first.user_id).to eq(test_user.id)
     end
   end
