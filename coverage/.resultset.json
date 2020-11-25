@@ -1,7 +1,68 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/adampatel/Projects/makers-bnb-the-empire/spec/features/creating_space_spec.rb": {
+      "/Users/constantine_quantum/Projects/makers-bnb-the-empire/spec/features/authentication_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/constantine_quantum/Projects/makers-bnb-the-empire/spec/features/creating_space_spec.rb": {
         "lines": [
           1,
           null,
@@ -30,16 +91,20 @@
           null
         ]
       },
-      "/Users/adampatel/Projects/makers-bnb-the-empire/spec/features/listing_spaces_spec.rb": {
+      "/Users/constantine_quantum/Projects/makers-bnb-the-empire/spec/features/listing_spaces_spec.rb": {
         "lines": [
           1,
           null,
           1,
+          null,
+          2,
+          null,
           1,
           1,
           1,
           null,
           null,
+          1,
           1,
           1,
           1,
@@ -51,7 +116,7 @@
           null
         ]
       },
-      "/Users/adampatel/Projects/makers-bnb-the-empire/spec/features/registration_spec.rb": {
+      "/Users/constantine_quantum/Projects/makers-bnb-the-empire/spec/features/registration_spec.rb": {
         "lines": [
           1,
           1,
@@ -68,7 +133,7 @@
           null
         ]
       },
-      "/Users/adampatel/Projects/makers-bnb-the-empire/spec/unit/database_connection_spec.rb": {
+      "/Users/constantine_quantum/Projects/makers-bnb-the-empire/spec/unit/database_connection_spec.rb": {
         "lines": [
           1,
           1,
@@ -88,31 +153,37 @@
           null
         ]
       },
-      "/Users/adampatel/Projects/makers-bnb-the-empire/spec/unit/spaces_spec.rb": {
+      "/Users/constantine_quantum/Projects/makers-bnb-the-empire/spec/unit/spaces_spec.rb": {
         "lines": [
           1,
-          null,
-          1,
-          1,
-          1,
           1,
           null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
           1,
           null,
-          null,
+          3,
           null,
           1,
           1,
           1,
           null,
           null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
           1,
           1,
           1,
@@ -125,7 +196,7 @@
           null
         ]
       },
-      "/Users/adampatel/Projects/makers-bnb-the-empire/spec/unit/user_spec.rb": {
+      "/Users/constantine_quantum/Projects/makers-bnb-the-empire/spec/unit/user_spec.rb": {
         "lines": [
           1,
           1,
@@ -149,6 +220,30 @@
           1,
           null,
           1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
           1,
           null,
           null,
@@ -156,6 +251,6 @@
         ]
       }
     },
-    "timestamp": 1606237936
+    "timestamp": 1606301558
   }
 }

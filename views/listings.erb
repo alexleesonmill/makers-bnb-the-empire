@@ -14,8 +14,14 @@
       <section class="display-spaces">
         <ul>
           <% @spaces.map { |entry| %>
-          <li><%= entry %></li>
-        </ul>
+          <li><%= entry.name %></li>
+          <li><%= entry.description %></li>
+          <li><%= entry.location %></li>
+          <li><%= entry.price %></li>
+          <%# @user = @user.find(id: entry.user_id ) %>
+<!--            <li><%#= @user.name %></li>-->
+<!--            To be continued...-->
+        </ul><br><br>
           <%} %>
       </section>
     </main>
