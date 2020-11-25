@@ -20,17 +20,16 @@
 
     <main>
       <section class="display-spaces">
+        <% @spaces.each do |entry| %>
         <ul>
-          <% @spaces.map { |entry| %>
           <li><%= entry.name %></li>
-          <li><%= entry.description %></li>
-          <li><%= entry.location %></li>
-          <li><%= entry.price %></li>
-          <%# user = @user_class.find(id: entry.user_id ) %>
-<!--            <li><%#= user.name %></li>-->
-<!--            To be continued...-->
-        </ul><br><br>
-          <%} %>
+          <li>Description: <%= entry.description %></li>
+          <li>Location: <%= entry.location %></li>
+          <li>Price: £<%= entry.price %></li>
+          <% user = User.find(id: entry.user_id) %>
+          <li>Host: <%= user.name %></li> <br>
+        </ul>
+          <% end %>
       </section>
     </main>
   </body>
