@@ -25,6 +25,6 @@ feature "displaying spaces on MakersBnB" do
     expect(page).to have_content("A luxurious villa in Beverly Hills")
     expect(page).to have_content("Los Angeles, Beverly Hills")
     expect(page).to have_content("300")
-    # expect(page).to have_content(test_user.name)
+    expect(page).to have_content(test_user.name)
   end
 end
