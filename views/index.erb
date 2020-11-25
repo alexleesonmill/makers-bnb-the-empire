@@ -1,38 +1,67 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MakersBnb</title>
-</head>
-<body>
-  <div>
-    <h1> MakersBnB </h1>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="generator" content="Jekyll v4.1.1">
+    <title>Floating labels example · Bootstrap</title>
+​
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/floating-labels/">
+​
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.css">
+    <link rel="stylesheet" href="css/bootstrap-reboot.css">
+    <script src="/js/bootstrap.min.js"></script>
+
+<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">​
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+​
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+  </head>
+
+  <body>
+    <div id="header" style="background-color: #20B2AA; width: 100%; color: white; padding-top: 10px; padding-bottom: 10px;">
+    <h1 align="center">MakersBnB</h1>
+    </div><!-- // header -->
+    <form action="/users" method="post" class="form-signin" style="width: 400px; margin: 0 auto;">
+  <div class="text-center mb-4">
+    <br><%= flash[:notice] %>
+    <!-- <h5>Sign Up</h5> -->
+    <h5>Join MakersBnB</h5>
   </div>
 
-  <div>
-    <ul>
-      <li>
-        <a href="/sessions/new">Login</a>
-      </li>
-    </ul>
+  <div class="form-label-group">
+    <input type="text" name="name" class="form-control" placeholder="Enter your name" required autofocus>
   </div>
-
-  <%= flash[:notice] %>
-
-  <div>
-    <h3> Sign Up </h3>
-    <form action="/users" method="post">
-      <label for="name">Name</label>
-      <input type="text" name="name" required>
-      <br>
-      <label for="email">Email</label>
-      <input type="email" name="email" required>
-      <br>
-      <label for="password">Password</label>
-      <input type="password" name="password" autocomplete="off">
-      <br>
-      <input type="submit" value="Submit">
-    </form>
+​
+  <div class="form-label-group">
+    <input type="email" name="email" class="form-control" placeholder="Email address" required autofocus>
   </div>
+​
+  <div class="form-label-group">
+    <input type="password" name="password" class="form-control" placeholder="Password" required>
+  </div>
+​
+
+  <input class="btn btn-lg btn-primary btn-block" style="background-color: #20B2AA; border: 0px;" type="submit" value="Submit">
+  <br><p align="center">Already have an account? <a href="/sessions/new">Login here</a></p>
+  <p class="mt-5 mb-3 text-muted text-center">&copy; 2020</p>
+</form>
 </body>
+</html>
