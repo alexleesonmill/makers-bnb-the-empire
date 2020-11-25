@@ -8,6 +8,7 @@ require_relative './setup_test_database'
 require_relative '../lib/database_connection'
 require_relative '../lib/user'
 require_relative '../controllers/app'
+require_relative './features/web_helpers'
 
 Capybara.app = MakersBnB
 
