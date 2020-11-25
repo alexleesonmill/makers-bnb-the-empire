@@ -11,11 +11,11 @@ class MakersBnB < Sinatra::Base
     )
 
     session[:user_id] = user.id
-    redirect('/')
+    redirect('/dashboard')
   end
 
   get '/sessions/new' do
-    erb :login
+    erb(:login)
   end
 
   post '/sessions' do
@@ -26,7 +26,7 @@ class MakersBnB < Sinatra::Base
 
     if user
       session[:user_id] = user.id
-      redirect('/')
+      redirect('/dashboard')
     else
       flash[:notice] = 'Login details incorrect - please try again'
       redirect('/sessions/new')

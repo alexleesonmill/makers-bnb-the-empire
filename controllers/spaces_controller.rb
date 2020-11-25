@@ -2,15 +2,28 @@ require_relative '../lib/spaces'
 require_relative '../lib/user'
 
 class MakersBnB < Sinatra::Base
-
   get '/listings' do
-    @spaces = Space.retrieve_available
-    @user = User
-    erb :listings
+    @user = User.find(id: session[:user_id])
+
+    if @user 
+      @user_class = User
+      @spaces = Space.retrieve_available
+      erb :listings
+    else
+      flash[:notice] = 'Please log in to view listings'
+      redirect('/sessions/new')
+    end
   end
 
   get '/add_space' do
-    erb(:add_new_property)
+    @user = User.find(id: session[:user_id])
+
+    if @user
+      erb(:add_new_property)
+    else
+      flash[:notice] = 'Please log in to add a space'
+      redirect('/sessions/new')
+    end
   end
 
   post '/listings/new' do
@@ -18,5 +31,4 @@ class MakersBnB < Sinatra::Base
     location: params[:property_location], price: params[:property_price], user_id: session[:user_id])
     redirect('/listings')
   end
-
 end

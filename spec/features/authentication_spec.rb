@@ -7,12 +7,10 @@ feature 'Authentication' do
     fill_in :password, with: 'Alex123'
     click_button 'Login'
 
-    expect(current_path).to eq '/'
+    expect(current_path).to eq '/dashboard'
     expect(page).to have_content 'Welcome, Alex'
   end
-end
 
-feature 'Authentication' do
   scenario 'User gets error message when logging in with wrong email' do
     user = User.create(name: 'Alex', email: 'alex@alex.com', password: 'Alex123')
     visit '/'
@@ -38,9 +36,7 @@ feature 'Authentication' do
     expect(page).not_to have_content 'Welcome, Alex'
     expect(page).to have_content 'Login details incorrect - please try again'
   end
-end
 
-feature 'Authentication' do
   scenario 'User is able to log out' do
     user = User.create(name: 'Alex', email: 'alex@alex.com', password: 'Alex123')
     visit '/'

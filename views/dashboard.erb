@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= @user.name %> 's Dashboard</title>
+</head>
+<body>
+  <div>
+    <h1> Dashboard </h1>
+  </div>
+
+  <div> Welcome, <%= @user.name %> </div>
+
+  <div>
+    <ul>
+      <li>
+        <a href="/add_space">List Property</a>
+      </li>
+      <li>
+        <a href="/listings">Listings</a>
+      </li>
+    </ul>
+    <form action="/sessions/destroy" method="post">
+      <input type="submit" value="Log Out" >
+    </form>
+  </div>
+</body>

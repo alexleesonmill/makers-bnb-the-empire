@@ -7,6 +7,12 @@
 <body>
 <h1>List your property on MakersBnB</h1>
 
+<div>
+  <form action="/sessions/destroy" method="post">
+        <input type="submit" value="Log Out" >
+  </form>
+</div>
+
 <form action="/listings/new" method="POST">
 <label for="property_name">Property Name</label>
 <input id="property_name" type="text" name="property_name" placeholder="Enter the name of your space">
