@@ -29,11 +29,11 @@ describe Space do
     it 'returns all listings from within the spaces table in the database' do
       Space.create(description: "A luxurious villa in Beverly Hills", name: "Hidden Gem of Beverly Hills", location: "Los Angeles, Beverly Hills", price: 300, user_id: test_user.id)
       result = described_class.retrieve_available
-      expect(result.first['name']).to eq("Hidden Gem of Beverly Hills")
-      expect(result.first['description']).to eq("A luxurious villa in Beverly Hills")
-      expect(result.first['location']).to eq("Los Angeles, Beverly Hills")
-      expect(result.first['price']).to eq("300")
-      expect(result.first['user_id']).to eq(test_user.id)
+      expect(result.first.name).to eq("Hidden Gem of Beverly Hills")
+      expect(result.first.description).to eq("A luxurious villa in Beverly Hills")
+      expect(result.first.location).to eq("Los Angeles, Beverly Hills")
+      expect(result.first.price).to eq("300")
+      expect(result.first.user_id).to eq(test_user.id)
     end
   end
 end

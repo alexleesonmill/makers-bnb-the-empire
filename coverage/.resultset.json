@@ -62,6 +62,15 @@
           null
         ]
       },
+      "/Users/constantine_quantum/Projects/makers-bnb-the-empire/spec/features/booking_property_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
       "/Users/constantine_quantum/Projects/makers-bnb-the-empire/spec/features/creating_space_spec.rb": {
         "lines": [
           1,
@@ -111,7 +120,7 @@
           1,
           1,
           1,
-          1,
+          null,
           null,
           null
         ]
@@ -251,6 +260,6 @@
         ]
       }
     },
-    "timestamp": 1606301558
+    "timestamp": 1606307107
   }
 }
