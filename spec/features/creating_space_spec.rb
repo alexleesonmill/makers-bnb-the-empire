@@ -1,12 +1,6 @@
 feature "creating a space" do
   scenario "users can click a link from the dashboard to access the 'add space' form" do
-    User.create(name: 'Malachi', email: 'm.spencer@makers.com', password: '2020')
-
-    visit('/')
-    click_link('Login')
-    fill_in('email', with: 'm.spencer@makers.com')
-    fill_in('password', with: '2020')
-    click_button('Login')
+    login_to_dashboard
     click_link('List Property')
 
     expect(current_path).to eq('/add_space')
@@ -14,7 +8,9 @@ feature "creating a space" do
   end
 
   scenario "users can enter basic details of their property into the 'add space' form" do
-    visit('/add_space')
+    login_to_dashboard
+    click_link('List Property')
+    
     fill_in 'property_name', with: 'Hidden Gem of Beverly Hills'
     fill_in 'property_description', with: 'A luxurious villa in Beverly Hills'
     fill_in 'property_location', with: 'Los Angeles, Beverly Hills'
