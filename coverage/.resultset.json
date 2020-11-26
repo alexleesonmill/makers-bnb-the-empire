@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/constantine_quantum/Projects/makers-bnb-the-empire/spec/features/authentication_spec.rb": {
+
         "lines": [
           1,
           1,
@@ -58,7 +58,7 @@
           null
         ]
       },
-      "/Users/constantine_quantum/Projects/makers-bnb-the-empire/spec/features/booking_property_spec.rb": {
+
         "lines": [
           1,
           null,
@@ -67,13 +67,14 @@
           null
         ]
       },
-      "/Users/constantine_quantum/Projects/makers-bnb-the-empire/spec/features/creating_space_spec.rb": {
+
         "lines": [
           1,
           1,
           1,
           1,
           null,
+
           1,
           1,
           null,
@@ -96,11 +97,7 @@
           null
         ]
       },
-      "/Users/constantine_quantum/Projects/makers-bnb-the-empire/spec/features/listing_spaces_spec.rb": {
-        "lines": [
-          1,
-          null,
-          4,
+
           null,
           1,
           1,
@@ -118,11 +115,7 @@
           null,
           null,
           null,
-          1,
-          1,
-          null,
-          1,
-          1,
+
           1,
           1,
           1,
@@ -156,7 +149,7 @@
           null
         ]
       },
-      "/Users/constantine_quantum/Projects/makers-bnb-the-empire/spec/features/registration_spec.rb": {
+
         "lines": [
           1,
           1,
@@ -182,7 +175,7 @@
           null
         ]
       },
-      "/Users/constantine_quantum/Projects/makers-bnb-the-empire/spec/unit/booking_spec.rb": {
+
         "lines": [
           1,
           null,
@@ -221,7 +214,7 @@
           null
         ]
       },
-      "/Users/constantine_quantum/Projects/makers-bnb-the-empire/spec/unit/database_connection_spec.rb": {
+
         "lines": [
           1,
           1,
@@ -294,7 +287,7 @@
           null
         ]
       },
-      "/Users/constantine_quantum/Projects/makers-bnb-the-empire/spec/unit/user_spec.rb": {
+
         "lines": [
           1,
           1,
@@ -349,6 +342,6 @@
         ]
       }
     },
-    "timestamp": 1606387043
+
   }
 }
