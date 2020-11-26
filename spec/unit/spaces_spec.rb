@@ -2,7 +2,7 @@ describe Space do
 
   let(:test_user) { User.create(name: "Jane Doe", email: "jane_doe@gmail.com", password: "12345qwerty") }
 
-  context ".create" do
+  describe ".create" do
     it "is called on the Space class" do
       expect(described_class).to respond_to(:create).with_keywords(:name, :description, :location, :price, :user_id)
     end
@@ -18,7 +18,7 @@ describe Space do
     end
   end
 
-  context ".retrieve_available" do
+  describe ".retrieve_available" do
     it 'is called on the Spaces class' do
       expect(described_class).to respond_to(:retrieve_available).with(0..1).arguments
     end
@@ -44,6 +44,20 @@ describe Space do
       expect(booking.first.booked).to eq('t') # When executing a SELECT SQL query, the return value for a boolean is either 't' or 'f'
       expect(booking.first.space_id).to eq(new_space.id)
       expect(booking.first.user_id).to eq(new_space.user_id)
+    end
+  end
+
+  describe '.find_by_id' do
+    it 'returns a given space by id' do
+      space = Space.create(
+          description: "A luxurious villa in Beverly Hills",
+          name: "Hidden Gem of Beverly Hills",
+          location: "Los Angeles, Beverly Hills",
+          price: 300,
+          user_id: test_user.id
+      )
+      found_space = Space.find_by_id(id: space.id)
+      expect(found_space.id).to eq(space.id)
     end
   end
 end

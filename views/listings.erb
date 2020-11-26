@@ -29,6 +29,11 @@
           <% user = User.find(id: entry.user_id) %>
           <li>Host: <%= user.name %></li> <br>
         </ul>
+          <div>
+            <form action="/requests/<%=entry.id%>" method="post">
+              <input type="submit" value="Request Property">
+            </form>
+          </div>
           <% end %>
       </section>
     </main>
