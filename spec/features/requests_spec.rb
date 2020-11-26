@@ -13,7 +13,7 @@ feature "Requests" do
       make_request
       click_link("Requests")
       expect(page).to have_content("Hidden Gem of Beverly Hills")
-      expect(page).to have_content("'07/17/2019 12:00 AM'")
+      expect(page).to have_content("2019-07-17")
     end
   end
 
@@ -25,7 +25,7 @@ feature "Requests" do
       click_link("Requests")
       expect(page).to have_content("Requests Received")
       expect(page).to have_content("Hidden Gem of Beverly Hills")
-      expect(page).to have_content("07/17/2019 12:00 AM")
+      expect(page).to have_content("2019-07-17")
     end
   end
 end
