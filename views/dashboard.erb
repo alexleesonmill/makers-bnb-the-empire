@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/bootstrap-grid.css">
-  <link rel="stylesheet" href="css/bootstrap-reboot.css">
-  <script src="/js/bootstrap.min.js"></script>
+  <%= erb :head_css %>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><%= @user.name %> 's Dashboard</title>
@@ -16,8 +13,9 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 </head>
 <body>
-  <div>
-    <h1> Dashboard </h1>
+  <%= erb :header %>
+  <div class="text-center mb-4">
+    <h2> Dashboard </h2>
   </div>
 
   <div> Welcome, <%= @user.name %> </div>
@@ -61,7 +59,7 @@
       </div>
       <script>
           $(function () {
-              $('#datetimepicker1').datetimepicker();
+              $('#datetimepicker1').datetimepicker({format: 'YYYY-MM-DD'});
           });
       </script>
     </form>
