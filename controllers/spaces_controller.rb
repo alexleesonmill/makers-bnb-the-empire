@@ -6,7 +6,7 @@ class MakersBnB < Sinatra::Base
     @user = User.find(id: session[:user_id])
 
     if @user
-      @spaces = Space.retrieve_available
+      @spaces = Space.retrieve_available(session[:check_in_date])
       erb :listings
     else
       flash[:notice] = 'Please log in to view listings'
@@ -34,5 +34,10 @@ class MakersBnB < Sinatra::Base
       user_id: session[:user_id]
     )
     redirect('/listings')
+  end
+
+  post '/listings/results' do
+    session[:check_in_date] = params[:check_in_date]
+    redirect '/listings'
   end
 end

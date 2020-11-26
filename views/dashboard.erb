@@ -1,9 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap-grid.css">
+  <link rel="stylesheet" href="css/bootstrap-reboot.css">
+  <script src="/js/bootstrap.min.js"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><%= @user.name %> 's Dashboard</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/momentjs/2.14.1/moment.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 </head>
 <body>
   <div>
@@ -25,4 +35,42 @@
       <input type="submit" value="Log Out" >
     </form>
   </div>
+
+  <section class="select-date">
+    <form action="/listings/results" method="post">
+      <div class="container">
+        <div class="panel panel-primary">
+          <div class="panel-heading">Select your Check In date</div>
+          <div class="panel-body">
+            <div class="row">
+              <div class='col-md-6'>
+                <div class="form-group">
+                  <label class="control-label">Check In Date</label>
+                  <div class='input-group date' id='datetimepicker1'>
+                    <input type='text' class="form-control" name="check_in_date"/>
+                    <span class="input-group-addon">
+                     <span class="glyphicon glyphicon-calendar"></span>
+                     </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <input type="submit" class="btn btn-primary" value="Search Properties">
+          </div>
+        </div>
+      </div>
+      <script>
+          $(function () {
+              $('#datetimepicker1').datetimepicker();
+          });
+      </script>
+    </form>
+  </section><br><br>
+  <section class="list-all-properties">
+    <p>
+      <h5>
+        Do you want to see all available properties regardless of the check-in date? Click <a href="/listings">here</a>.
+      </h5>
+    </p>
+  </section>
 </body>
