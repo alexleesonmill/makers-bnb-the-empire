@@ -32,4 +32,31 @@ describe Booking do
       expect(result.first.user_id).to eq(test_user.id)
     end
   end
+
+  describe ".retrieve_requests_made" do
+    it 'is called on the Booking class' do
+      expect(described_class).to respond_to(:retrieve_requests_made).with_keywords(:user_id)
+    end
+
+    it 'retrieves all requests made by a specific user' do
+      described_class.create(check_in: Date.today.to_s, booked: false, space_id: space.id, user_id: test_user.id)
+      result = described_class.retrieve_requests_made(user_id: test_user.id)
+      expect(result[0]['user_id']).to eq(test_user.id)
+      expect(result[0]['name']).to eq("Hidden Gem of Beverly Hills")
+      expect(result[0]['check_in']).to eq(Date.today.to_s)
+    end
+  end
+
+  describe '.retrieve_requests_received' do
+    it 'is called on the Booking class' do
+      expect(described_class).to respond_to(:retrieve_requests_received).with_keywords(:host_id)
+    end
+
+    it 'retrieves all requests received' do
+      described_class.create(check_in: Date.today.to_s, booked: false, space_id: space.id, user_id: test_user.id)
+      result = described_class.retrieve_requests_received(host_id: space.user_id)
+      expect(result[0]['user_id']).to eq(space.user_id)
+      expect(result[0]['name']).to eq("Hidden Gem of Beverly Hills")
+    end
+  end
 end

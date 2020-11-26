@@ -4,8 +4,8 @@ feature "Booking a property" do
 
   scenario 'user requests to book a property on a date' do
     space = Space.create(
-        description: "A luxurious villa in Beverly Hills",
         name: "Hidden Gem of Beverly Hills",
+        description: "A luxurious villa in Beverly Hills",
         location: "Los Angeles, Beverly Hills",
         price: 300,
         user_id: host.id
@@ -15,6 +15,6 @@ feature "Booking a property" do
     click_button('Search Properties')
     expect(current_path).to eq('/listings')
     first('.display-spaces').click_button('Request Property')
-    expect(page).to have_content("Your booking request for #{space.name} has been sent!")
+    expect(page).to have_content("Your booking request has been sent!")
   end
 end

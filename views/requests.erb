@@ -30,12 +30,47 @@
   </style>
   <!-- Custom styles for this template -->
 </head>
-<body>
-<main>
-  <section class="confirmation-message">
-    <p> Your booking request has been sent! </p>
-    <p>Return to <a href="/dashboard">dashboard</a></p>
-  </section>
-</main>
-</body>
+  <body>
+    <header>
+      <h1>
+        Requests
+      </h1>
+    </header>
+    <main>
+      <section class="requests-made">
+        <p>
+          <h3>
+            Requests Made
+          </h3>
+        </p>
+        <ul>
+          <% @requests_made.each do |request| %>
+            <li>
+              <%= request['name'] %>
+            </li>
+            <li>
+              <%= request['check_in'] %>
+            </li>
+          <% end %>
+        </ul>
+      </section>
+      <section class="requests-received">
+        <p>
+        <h3>
+          Requests Received
+        </h3>
+        </p>
+        <ul>
+          <% @requests_received.each do |request| %>
+            <li>
+              <%= request['name'] %>
+            </li>
+            <li>
+              <%= request['check_in'] %>
+            </li>
+          <% end %>
+        </ul>
+      </section>
+    </main>
+  </body>
 </html>
