@@ -21,16 +21,16 @@
         <div class="row">
         <% @spaces.each do |entry| %>
             <div class="col-sm-6">
-              <div class="card">
+              <div class="card" style="margin-bottom: 30px;">
                 <div class="card-body">
                   <ul>
-                    <li><%= entry.name %></li>
-                    <li>Description: <%= entry.description %></li>
-                    <li>Location: <%= entry.location %></li>
-                    <li>Price: £<%= entry.price %></li>
+                    <h5 class="card-title"><%= entry.name %></h5>
+                    <p class="card-text"><%= entry.description %></p>
+                    <p class="card-text">Location: <%= entry.location %>
+                    <br>Price: £<%= entry.price %>
                     <% user = User.find(id: entry.user_id) %>
-                    <li>Host: <%=  %></li> <br>
-                    <a href="#" class="btn btn-primary" style="background-color: #20B2AA; border: 0px;">Book Space</a>
+                    <br>Host: <%= @user.name %></p>
+                    <p align="center"><a href="#" class="btn btn-lg btn-primary btn-block" style="background-color: #20B2AA; border: 0px;">Book Space</a></p>
                   </ul>
                 </div>
               </div>
