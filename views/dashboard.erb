@@ -15,7 +15,9 @@
 <body>
   <%= erb :header %>
   <%= erb :navbar %>
-<div> Welcome, <%= @user.name %> </div>
+  <br>
+<h3 align="center"> Welcome, <%= @user.name %> </h3>
+<br>
   <section class="select-date">
     <form action="/listings/results" method="post">
       <div class="container">

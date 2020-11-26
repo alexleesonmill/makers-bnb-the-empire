@@ -9,9 +9,11 @@
   <%= erb :header %>
   <%= erb :navbar %>
   <header>
-      <h1>
+<br>
+      <h3 align="center">
         MakersBnB Spaces
-      </h1>
+      </h3><br>
+
     </header>
 
     <main>
@@ -27,7 +29,7 @@
                     <li>Location: <%= entry.location %></li>
                     <li>Price: £<%= entry.price %></li>
                     <% user = User.find(id: entry.user_id) %>
-                    <li>Host: <%= user.name %></li> <br>
+                    <li>Host: <%=  %></li> <br>
                     <a href="#" class="btn btn-primary" style="background-color: #20B2AA; border: 0px;">Book Space</a>
                   </ul>
                 </div>
