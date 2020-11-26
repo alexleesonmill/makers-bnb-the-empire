@@ -4,47 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login to Makers BnB</title>
-  <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/bootstrap-grid.css">
-  <link rel="stylesheet" href="css/bootstrap-reboot.css">
-  <script src="/js/bootstrap.min.js"></script>
 
-  <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">​
-      <style>
-        .bd-placeholder-img {
-          font-size: 1.125rem;
-          text-anchor: middle;
-          -webkit-user-select: none;
-          -moz-user-select: none;
-          -ms-user-select: none;
-          user-select: none;
-        }
-  ​
-        @media (min-width: 768px) {
-          .bd-placeholder-img-lg {
-            font-size: 3.5rem;
-          }
-        }
-      </style>
-      <!-- Custom styles for this template -->
+  <%= erb :head_css %>
 
 </head>
 <body>
   <%= erb :header %>
-  <div>
-    <h1 align="center">Login to Makers BnB</h1>
+  <div class="text-center mb-4">
+    <br><%= flash[:notice] %>
+    <!-- <h5>Sign Up</h5> -->
+    <h5>Login to Makers BnB</h5>
   </div>
   <div >
     <h3> <%= flash[:notice] %>
     <form action="/sessions" method="post" class="form-signin" style="width: 400px; margin: 0 auto;">
       <div class="form-label-group">
-
       <input type="email" name="email" class="form-control" placeholder="email" required autofocus>
       </div>
       <br>
       <div class="form-label-group">
-      
       <input type="password" name="password" class="form-control" placeholder="password" autocomplete="off">
       </div>
       <br>
