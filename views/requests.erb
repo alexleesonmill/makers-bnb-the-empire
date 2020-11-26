@@ -68,9 +68,18 @@
             <li>
               <%= request['check_in'] %>
             </li>
+          <form action="/requests/<%= request['id'] %>" method="post">
+            <input type="hidden" name="_method" value="PATCH">
+            <input type="submit" value="Confirm Booking">
+          </form>
+          <form action="/requests/<%= request['id'] %>" method="post">
+            <input type="hidden" name="_method" value="DELETE">
+            <input type="submit" value="Reject Booking">
+          </form>
           <% end %>
         </ul>
-      </section>
+      </section><br>
+      <p>Return to <a href="/dashboard">dashboard</a>.</p>
     </main>
   </body>
 </html>

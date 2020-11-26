@@ -32,9 +32,32 @@ class Booking
   end
 
   def self.retrieve_requests_received(host_id:)
-    result = DatabaseConnection.query("SELECT bookings.user_id, bookings.check_in, spaces.name, spaces.user_id FROM bookings JOIN spaces ON (space_id = spaces.id)
-                                           WHERE space_id IN (SELECT id FROM spaces WHERE user_id='#{host_id}');")
+    result = DatabaseConnection.query("SELECT bookings.id, bookings.user_id, bookings.check_in, spaces.name, spaces.user_id FROM bookings JOIN spaces ON (space_id = spaces.id)
+                                           WHERE space_id IN (SELECT id FROM spaces WHERE user_id='#{host_id}') AND booked=FALSE;")
+
     result
+  end
+
+  def self.confirm(booking_id:)
+    result = DatabaseConnection.query("UPDATE bookings SET booked = TRUE WHERE id = '#{booking_id}' RETURNING booked;")
+  end
+
+  def self.deny(booking_id:)
+    result = DatabaseConnection.query("DELETE FROM bookings WHERE id='#{booking_id}';")
+    result
+  end
+
+  def self.retrieve_confirmed_bookings(host_or_guest:, user_id:)
+    if host_or_guest == "guest"
+      result = DatabaseConnection.query("SELECT * FROM bookings JOIN spaces ON (space_id = spaces.id)
+                                           WHERE bookings.user_id = '#{user_id}' AND booked=TRUE;")
+    elsif host_or_guest == "host"
+      result = DatabaseConnection.query("SELECT bookings.id, bookings.user_id, bookings.check_in, spaces.name, spaces.user_id FROM bookings JOIN spaces ON (space_id = spaces.id)
+                                           WHERE space_id IN (SELECT id FROM spaces WHERE user_id='#{user_id}') AND booked=TRUE;")
+    end
+    result.map do |booking|
+      Booking.new(booking['check_in'], booking['booked'], booking['space_id'], booking['user_id'], booking['id'])
+    end
   end
 
 end

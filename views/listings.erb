@@ -26,8 +26,8 @@
           <li>Description: <%= entry.description %></li>
           <li>Location: <%= entry.location %></li>
           <li>Price: £<%= entry.price %></li>
-          <% user = User.find(id: entry.user_id) %>
-          <li>Host: <%= user.name %></li> <br>
+          <%# user = User.find(id: entry.user_id) %>
+<!--          <li>Host: <%#= user.name %></li> <br>-->
         </ul>
           <div>
             <form action="/request_confirmation/<%=entry.id%>" method="get">
