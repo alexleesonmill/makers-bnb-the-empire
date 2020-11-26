@@ -19,3 +19,5 @@ a:hover {
 a:active {
     color: #20B2AA !important;
 }
+
+#navbar> li {display: inline-block;}
