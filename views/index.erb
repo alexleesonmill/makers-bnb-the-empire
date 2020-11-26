@@ -1,44 +1,18 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <title>MakersBnB - Index</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="generator" content="Jekyll v4.1.1">
-    <title>Floating labels example · Bootstrap</title>
-​
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/floating-labels/">
-​
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/bootstrap-grid.css">
-    <link rel="stylesheet" href="css/bootstrap-reboot.css">
-    <script src="/js/bootstrap.min.js"></script>
 
-<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">​
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
-​
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
-    <!-- Custom styles for this template -->
+    <%= erb :head_css %>
+    
   </head>
 
   <body>
-    <div id="header" style="background-color: #20B2AA; width: 100%; color: white; padding-top: 10px; padding-bottom: 10px;">
-    <h1 align="center">MakersBnB</h1>
-    </div><!-- // header -->
+    <%= erb :header %>
     <form action="/users" method="post" class="form-signin" style="width: 400px; margin: 0 auto;">
   <div class="text-center mb-4">
     <br><%= flash[:notice] %>
