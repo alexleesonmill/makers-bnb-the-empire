@@ -1,36 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <%= erb :head_css %>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css" type="text/css">
   </head>
 
   <body>
-    <header>
+  <%= erb :header %>
+  <%= erb :navbar %>
+  <header>
       <h1>
         MakersBnB Spaces
       </h1>
     </header>
 
-    <div>
-      <form action="/sessions/destroy" method="post">
-        <input type="submit" value="Log Out" >
-      </form>
-    </div>
-
     <main>
-      <section class="display-spaces">
+      <div id="master" style="width: 90%; margin: 0 auto;">
+        <div class="row">
         <% @spaces.each do |entry| %>
-        <ul>
-          <li><%= entry.name %></li>
-          <li>Description: <%= entry.description %></li>
-          <li>Location: <%= entry.location %></li>
-          <li>Price: £<%= entry.price %></li>
-          <% user = User.find(id: entry.user_id) %>
-          <li>Host: <%= user.name %></li> <br>
-        </ul>
+            <div class="col-sm-6">
+              <div class="card">
+                <div class="card-body">
+                  <ul>
+                    <li><%= entry.name %></li>
+                    <li>Description: <%= entry.description %></li>
+                    <li>Location: <%= entry.location %></li>
+                    <li>Price: £<%= entry.price %></li>
+                    <% user = User.find(id: entry.user_id) %>
+                    <li>Host: <%= user.name %></li> <br>
+                    <a href="#" class="btn btn-primary" style="background-color: #20B2AA; border: 0px;">Book Space</a>
+                  </ul>
+                </div>
+              </div>
+            </div>
           <% end %>
-      </section>
+        </div>
+      </div>
     </main>
   </body>
 </html>
+
+
+<!--        <h5 class="card-title">Special title treatment</h5>-->
+<!--        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>-->
+<!--        <a href="#" class="btn btn-primary">Go somewhere</a>-->
+
+<!--  <div class="col-sm-6">-->
+<!--    <div class="card">-->
+<!--      <div class="card-body">-->
+<!--        <h5 class="card-title">Special title treatment</h5>-->
+<!--        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>-->
+<!--        <a href="#" class="btn btn-primary">Go somewhere</a>-->
+
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+<!--</div>-->
