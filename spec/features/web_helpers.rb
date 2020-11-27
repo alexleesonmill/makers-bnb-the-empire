@@ -11,7 +11,7 @@ end
 
 def make_request
   host = User.create(name: 'Constantine', email: 'constantine@makers.com', password: '12345qwerty')
-  space = Space.create(
+  Space.create(
     name: 'Hidden Gem of Beverly Hills',
     description: 'A luxurious villa in Beverly Hills',
     location: 'Los Angeles, Beverly Hills',
