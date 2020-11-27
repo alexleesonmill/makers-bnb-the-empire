@@ -1,14 +1,24 @@
 # Makers B'n'B
 
-## Headline specifications
+## Setting Up The Database
 
-- Any signed-up user can list a new space.
-- Users can list multiple spaces.
-- Users should be able to name their space, provide a short description of the space, and a price per night.
-- Users should be able to offer a range of dates where their space is available.
-- Any signed-up user can request to hire any space for one night, and this should be approved by the user that owns that space.
-- Nights for which a space has already been booked should not be available for users to book that space.
-- Until a user has confirmed a booking request, that space can still be booked for that night.
+1) Connect to ```psql``` in the command line.
+2) Create the database using the command ```CREATE DATABASE "makers_bnb";```.
+3) Connect to the newly created database using ```\c makers_bnb```.
+4) Run the queries saved in the files in  ```db/migrations``` to set up the appropriate tables.
+5) To set up the test database, repeat steps 2 and 3 in ```psql``` with ```makers_bnb_test```.
+
+## Running The Application
+
+1) Ensure the database is set up using the *Setting Up The Database* instructions above.
+2) Run ```rackup``` in the command line.
+3) Go to ```localhost:9292``` in Google Chrome or Mozilla Firefox.
+
+## Running the Tests
+
+1) Ensure the test database is set up using the *Setting Up The Database* instructions above.
+1) Ensure you are in the project root on the command line.
+2) Run ```rspec``` in the command line.
 
 ## User Stories
 
