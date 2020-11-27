@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 describe DatabaseConnection do
   describe '.setup' do
     it 'establishes a connection to the test db using PG' do

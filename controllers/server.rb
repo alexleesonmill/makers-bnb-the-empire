@@ -1,9 +1,11 @@
-require_relative '../lib/user.rb'
+# frozen_string_literal: true
+
+require_relative '../lib/user'
 
 class MakersBnB < Sinatra::Base
   enable :sessions, :method_override
-  set :views, File.expand_path('../../views', __FILE__)
-  set :public_folder, File.expand_path('../../public', __FILE__)
+  set :views, File.expand_path('../views', __dir__)
+  set :public_folder, File.expand_path('../public', __dir__)
   register Sinatra::Flash
 
   get '/' do
@@ -16,7 +18,7 @@ class MakersBnB < Sinatra::Base
     end
   end
 
-  get  '/dashboard' do
+  get '/dashboard' do
     @user = User.find(id: session[:user_id])
     @date = session[:check_in_date]
     erb(:dashboard)

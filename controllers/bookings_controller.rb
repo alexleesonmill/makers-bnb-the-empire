@@ -1,12 +1,13 @@
-class MakersBnB < Sinatra::Base
+# frozen_string_literal: true
 
+class MakersBnB < Sinatra::Base
   get '/request_confirmation/:id' do
     Booking.create(
-              check_in: session[:check_in_date],
-              booked: false,
-              space_id: params[:id],
-              user_id: session[:user_id]
-          )
+      check_in: session[:check_in_date],
+      booked: false,
+      space_id: params[:id],
+      user_id: session[:user_id]
+    )
 
     erb(:request_confirmation)
   end
@@ -38,8 +39,8 @@ class MakersBnB < Sinatra::Base
     @user = User.find(id: session[:user_id])
 
     if @user
-      @bookings_guest = Booking.retrieve_confirmed_bookings(host_or_guest: "guest", user_id: session[:user_id])
-      @bookings_host = Booking.retrieve_confirmed_bookings(host_or_guest: "host", user_id: session[:user_id])
+      @bookings_guest = Booking.retrieve_confirmed_bookings(host_or_guest: 'guest', user_id: session[:user_id])
+      @bookings_host = Booking.retrieve_confirmed_bookings(host_or_guest: 'host', user_id: session[:user_id])
       erb :confirmed_bookings
     else
       flash[:notice] = 'Please login to view bookings'

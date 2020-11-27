@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class MakersBnB < Sinatra::Base
   get '/users/new' do
     erb(:sign_up)

@@ -1,4 +1,6 @@
-require_relative './lib/database_connection.rb'
+# frozen_string_literal: true
+
+require_relative './lib/database_connection'
 
 if ENV['ENVIRONMENT'] == 'test'
   DatabaseConnection.setup(dbname: 'makers_bnb_test')
