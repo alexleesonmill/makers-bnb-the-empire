@@ -33,6 +33,14 @@
 - As a host, so a user can book my space, I would like to provide details about my space(description, price, location)
 - As a host, so that users can book my property, I would like to be able to approve the request
 
+## Our Process
+
+As a team, we felt that in order to execute on the project efficiently, we needed a solid idea of what our vision for the project was. How would we go about building MakersBnB? What would the database architecture look like?<br>
+What pages did we need in order to meet the criteria in the user stories? Without having all of these questions - and many, many more - answered and agreed upon before we started to implement, our individual efforts may diverge quickly.<br>
+As such, we spent the whole of Monday and part of Tuesday planning and diagramming the backend of the project.<br>
+We felt it was important to keep things as simple as possible while ensuring that we met the specifications in the user stories. We kept our solution down to 3 classes and 3 database tables.
+
+
 ## Model Diagrams
 
 #### CRC Cards
