@@ -14,7 +14,7 @@ feature "Booking a property" do
     fill_in('check_in_date', with: '07/17/2019 12:00 AM')
     click_button('Search Properties')
     expect(current_path).to eq('/listings')
-    first('.display-spaces').click_button('Request Property')
+    first('.card').click_button('Request Space')
     expect(page).to have_content("Your booking request has been sent!")
   end
 end

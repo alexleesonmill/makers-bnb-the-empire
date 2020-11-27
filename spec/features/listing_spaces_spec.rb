@@ -4,7 +4,7 @@ feature "displaying spaces on MakersBnB" do
 
   scenario "displays 'Makers BnB Spaces' on /listings route" do
     login_to_dashboard
-    click_link('Listings')
+    click_link('here')
 
     expect(page).to have_content("MakersBnB Spaces")
   end
@@ -19,7 +19,7 @@ feature "displaying spaces on MakersBnB" do
     )
 
     login_to_dashboard
-    click_link('Listings')
+    click_link('here')
     
     expect(page).to have_content("Hidden Gem of Beverly Hills")
     expect(page).to have_content("A luxurious villa in Beverly Hills")

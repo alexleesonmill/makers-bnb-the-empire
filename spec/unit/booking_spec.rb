@@ -93,13 +93,13 @@ describe Booking do
     it 'retrieves all confirmed bookings as guest' do
       described_class.create(check_in: Date.today.to_s, booked: true, space_id: space.id, user_id: test_user.id)
       result = Booking.retrieve_confirmed_bookings(host_or_guest: "guest", user_id: test_user.id)
-      expect(result.first.user_id).to eq(test_user.id)
+      expect(result.first['user_id']).to eq(test_user.id)
     end
 
     it 'retrieves all confirmed bookings as host' do
       described_class.create(check_in: Date.today.to_s, booked: true, space_id: space.id, user_id: test_user.id)
       result = Booking.retrieve_confirmed_bookings(host_or_guest: "host", user_id: test_user.id)
-      expect(result.first.user_id).to eq(test_user.id)
+      expect(result.first['user_id']).to eq(test_user.id)
     end
   end
 end
