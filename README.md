@@ -25,11 +25,11 @@
 
 ## Model Diagrams
 
-#### CRC Diagram
+#### CRC Cards
 
 <figure>
-    ![image](https://user-images.githubusercontent.com/65397514/99977050-1a0ade00-2d9c-11eb-9337-45c21ff18eb6.png)
-    <figcaption></figcaption>
+    <img width="795" alt="model_diagram_01" src="https://user-images.githubusercontent.com/65397514/100461246-703f9000-30c0-11eb-9330-06ccf489873e.png">
+    <figcaption><i>Initial CRC Cards displaying all tables of the makers_bnb database</i></figcaption>
 </figure>
 
 #### Class Diagram
