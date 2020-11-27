@@ -55,9 +55,7 @@ class Booking
       result = DatabaseConnection.query("SELECT bookings.id, bookings.user_id, bookings.check_in, spaces.name, spaces.user_id FROM bookings JOIN spaces ON (space_id = spaces.id)
                                            WHERE space_id IN (SELECT id FROM spaces WHERE user_id='#{user_id}') AND booked=TRUE;")
     end
-    result.map do |booking|
-      Booking.new(booking['check_in'], booking['booked'], booking['space_id'], booking['user_id'], booking['id'])
-    end
+    result
   end
 
 end

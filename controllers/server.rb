@@ -18,6 +18,7 @@ class MakersBnB < Sinatra::Base
 
   get  '/dashboard' do
     @user = User.find(id: session[:user_id])
+    @date = session[:check_in_date]
     erb(:dashboard)
   end
 end

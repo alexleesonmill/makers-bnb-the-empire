@@ -7,6 +7,7 @@ class MakersBnB < Sinatra::Base
     @user = User.find(id: session[:user_id])
 
     if @user
+      @date = session[:check_in_date]
       @spaces = Space.retrieve_available(session[:check_in_date])
       erb :listings
     else
