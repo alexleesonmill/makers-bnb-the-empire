@@ -1,41 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <%= erb :head_css %>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css" type="text/css">
   </head>
 
   <body>
-    <header>
-      <h1>
+  <%= erb :header %>
+  <%= erb :navbar %>
+  <header>
+<br>
+      <h3 align="center">
         MakersBnB Spaces
-      </h1>
+      </h3><br>
+
     </header>
 
-    <div>
-      <form action="/sessions/destroy" method="post">
-        <input type="submit" value="Log Out" >
-      </form>
-    </div>
-
     <main>
-      <section class="display-spaces">
+      <div id="master" style="width: 90%; margin: 0 auto;">
+        <div class="row">
         <% @spaces.each do |entry| %>
-        <ul>
-          <li><%= entry.name %></li>
-          <li>Description: <%= entry.description %></li>
-          <li>Location: <%= entry.location %></li>
-          <li>Price: £<%= entry.price %></li>
-          <% user = User.find(id: entry.user_id) %>
-          <li>Host: <%= user.name %></li> <br>
-        </ul>
-          <div>
-            <form action="/request_confirmation/<%=entry.id%>" method="get">
+            <div class="col-sm-6">
+              <div class="card" style="margin-bottom: 30px;">
+                <div class="card-body">
+                  <ul>
+                    <h5 class="card-title"><%= entry.name %></h5>
+                    <p class="card-text"><%= entry.description %></p>
+                    <p class="card-text">Location: <%= entry.location %>
+                    <br>Price: £<%= entry.price %>
+                    <% user = User.find(id: entry.user_id) %>
+                    <br>Host: <%= user.name %></p>
+                    <p align="center"><a href="#" class="btn btn-lg btn-primary btn-block" style="background-color: #20B2AA; border: 0px;">Book Space</a></p>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+                    <form action="/request_confirmation/<%=entry.id%>" method="get">
               <input type="submit" value="Request Property">
             </form>
-          </div>
           <% end %>
-      </section>
+        </div>
+      </div>
     </main>
   </body>
 </html>

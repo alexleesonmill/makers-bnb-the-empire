@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/bootstrap-grid.css">
-  <link rel="stylesheet" href="css/bootstrap-reboot.css">
-  <script src="/js/bootstrap.min.js"></script>
+  <%= erb :head_css %>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><%= @user.name %> 's Dashboard</title>
@@ -16,40 +13,22 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 </head>
 <body>
-  <div>
-    <h1> Dashboard </h1>
-  </div>
 
-  <div> Welcome, <%= @user.name %> </div>
+  <%= erb :header %>
+  <%= erb :navbar %>
+<h3 align="center"> Welcome, <%= @user.name %> </h3>
+<br>
+  <section class="select-date" align="center">
 
-  <div>
-    <ul>
-      <li>
-        <a href="/add_space">List Property</a>
-      </li>
-      <li>
-        <a href="/listings">Listings</a>
-      </li>
-      <li>
-        <a href="/requests">Requests</a>
-      </li>
-      <li>
-        <a href="/confirmed_bookings">Bookings</a>
-      </li>
-    </ul>
-    <form action="/sessions/destroy" method="post">
-      <input type="submit" value="Log Out" >
-    </form>
-  </div>
-
-  <section class="select-date">
+<!--            <a href="/requests">Requests</a>
+            <a href="/confirmed_bookings">Bookings</a> -->
     <form action="/listings/results" method="post">
       <div class="container">
-        <div class="panel panel-primary">
-          <div class="panel-heading">Select your Check In date</div>
-          <div class="panel-body">
+        <div class="panel panel-primary" align="center" style="border: 1px solid #20B2AA">
+          <div class="panel-heading" style="background-color: #20B2AA; border-bottom: 1px solid #20B2AA">Select your Check In date</div>
+          <div class="panel-body" align="center">
             <div class="row">
-              <div class='col-md-6'>
+              <div class='col-md-6 center-block'>
                 <div class="form-group">
                   <label class="control-label">Check In Date</label>
                   <div class='input-group date' id='datetimepicker1'>
@@ -61,22 +40,21 @@
                 </div>
               </div>
             </div>
-            <input type="submit" class="btn btn-primary" value="Search Properties">
+            <input type="submit" class="btn btn-primary" value="Search Properties" style="background-color: #20B2AA; border: 1px solid #20B2AA">
           </div>
         </div>
       </div>
       <script>
           $(function () {
-              $('#datetimepicker1').datetimepicker();
+              $('#datetimepicker1').datetimepicker({format: 'YYYY-MM-DD'});
           });
       </script>
     </form>
   </section><br><br>
   <section class="list-all-properties">
-    <p>
-      <h5>
+
+      <h5 align="center">
         Do you want to see all available properties regardless of the check-in date? Click <a href="/listings">here</a>.
       </h5>
-    </p>
   </section>
 </body>
