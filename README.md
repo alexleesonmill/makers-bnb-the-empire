@@ -58,3 +58,22 @@
     <img width="430" alt="Screenshot 2020-11-27 at 14 41 24" src="https://user-images.githubusercontent.com/65397514/100460388-ff4ba880-30be-11eb-8a92-b5498e44462e.png">
     <figcaption>RSpec Suite - Testing Results and Coverage</figcaption>
 </figure>
+
+## Sample pages of the Makers B'n'B App
+
+#### Sign-Up Page
+<figure>
+    <img width="1541" alt="Screenshot 2020-11-27 at 14 57 15" src="https://user-images.githubusercontent.com/65397514/100461779-26a37500-30c1-11eb-8bb2-6381c10c5ce6.png">
+</figure>
+
+#### User Dashboard
+
+<figure>
+    <img width="1542" alt="Screenshot 2020-11-27 at 14 57 36" src="https://user-images.githubusercontent.com/65397514/100461785-2905cf00-30c1-11eb-9794-a64128f9ba6f.png">
+</figure> 
+
+#### Properties / Listings
+
+<figure>
+    <img width="1542" alt="Screenshot 2020-11-27 at 14 58 00" src="https://user-images.githubusercontent.com/65397514/100461792-2b682900-30c1-11eb-9a61-ac6835e8284d.png">
+</figure>
