@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 feature 'Authentication' do
   scenario 'User can login' do
-    user = User.create(name: 'Alex', email: 'alex@alex.com', password: 'Alex123')
+    User.create(name: 'Alex', email: 'alex@alex.com', password: 'Alex123')
     visit '/'
     click_link 'Login'
     fill_in :email, with: 'alex@alex.com'
@@ -12,7 +14,7 @@ feature 'Authentication' do
   end
 
   scenario 'User gets error message when logging in with wrong email' do
-    user = User.create(name: 'Alex', email: 'alex@alex.com', password: 'Alex123')
+    User.create(name: 'Alex', email: 'alex@alex.com', password: 'Alex123')
     visit '/'
     click_link 'Login'
     fill_in :email, with: 'balex@alex.com'
@@ -25,7 +27,7 @@ feature 'Authentication' do
   end
 
   scenario 'User gets error message when logging in with wrong password' do
-    user = User.create(name: 'Alex', email: 'alex@alex.com', password: 'Alex123')
+    User.create(name: 'Alex', email: 'alex@alex.com', password: 'Alex123')
     visit '/'
     click_link 'Login'
     fill_in :email, with: 'alex@alex.com'
@@ -38,7 +40,7 @@ feature 'Authentication' do
   end
 
   scenario 'User is able to log out' do
-    user = User.create(name: 'Alex', email: 'alex@alex.com', password: 'Alex123')
+    User.create(name: 'Alex', email: 'alex@alex.com', password: 'Alex123')
     visit '/'
     click_link 'Login'
     fill_in :email, with: 'alex@alex.com'

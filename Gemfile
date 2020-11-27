@@ -1,14 +1,16 @@
-source "https://rubygems.org"
+# frozen_string_literal: true
 
+source 'https://rubygems.org'
+
+gem 'bcrypt'
+gem 'pg'
 gem 'sinatra'
 gem 'sinatra-flash'
-gem 'pg'
-gem 'bcrypt'
 
 group :development, :test do
-  gem 'rspec'
   gem 'capybara'
+  gem 'rspec'
+  gem 'rubocop'
   gem 'simplecov', require: false
   gem 'simplecov-console', require: false
-  gem 'rubocop'
 end

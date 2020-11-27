@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 feature 'registration' do
   scenario 'user visits home and signs up' do
     visit('/')

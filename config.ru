@@ -1,3 +1,5 @@
-require_relative './controllers/app.rb'
+# frozen_string_literal: true
+
+require_relative './controllers/app'
 
 run MakersBnB

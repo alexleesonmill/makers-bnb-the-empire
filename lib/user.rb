@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 require 'bcrypt'
-require_relative './database_connection.rb'
+require_relative './database_connection'
 
 class User
   attr_reader :id, :name, :email

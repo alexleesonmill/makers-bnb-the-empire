@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 describe User do
   describe '.create' do
     it 'wraps user info in a User object' do
@@ -10,7 +12,7 @@ describe User do
 
   describe '.find' do
     it 'returns nil if id is given as nil' do
-      user = User.create(name: 'Malachi', email: 'm.spencer@makers.com', password: 'p20201124')
+      User.create(name: 'Malachi', email: 'm.spencer@makers.com', password: 'p20201124')
 
       expect(User.find(id: nil)).to be_nil
     end
@@ -34,14 +36,14 @@ describe User do
     end
 
     it 'retusn nil if user enters wrong email' do
-      user = User.create(name: 'Malachi', email: 'm.spencer@makers.com', password: 'p20201124')
+      User.create(name: 'Malachi', email: 'm.spencer@makers.com', password: 'p20201124')
       authenticated_user = User.authenticate(email: 'a.spencer@makers.com', password: 'p20201124')
 
       expect(authenticated_user).to eq nil
     end
 
     it 'retusn nil if user enters wrong password' do
-      user = User.create(name: 'Malachi', email: 'm.spencer@makers.com', password: 'p20201124')
+      User.create(name: 'Malachi', email: 'm.spencer@makers.com', password: 'p20201124')
       authenticated_user = User.authenticate(email: 'm.spencer@makers.com', password: 'a20201124')
 
       expect(authenticated_user).to eq nil
