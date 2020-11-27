@@ -30,15 +30,16 @@
                     <br>Price: £<%= entry.price %>
                     <% user = User.find(id: entry.user_id) %>
                     <br>Host: <%= user.name %></p>
-                    <p align="center"><a href="#" class="btn btn-lg btn-primary btn-block" style="background-color: #20B2AA; border: 0px;">Book Space</a></p>
+                    <p align="center"><form action="/request_confirmation/<%=entry.id%>" method="get">
+                    <input type="submit" value="Request Space" class="btn btn-lg btn-primary btn-block" style="background-color: #20B2AA; border: 0px;"></form></p>
                   </ul>
                 </div>
               </div>
             </div>
 
-                    <form action="/request_confirmation/<%=entry.id%>" method="get">
-              <input type="submit" value="Request Property">
-            </form>
+
+<!--              <input type="submit" value="Request Property">-->
+
           <% end %>
         </div>
       </div>

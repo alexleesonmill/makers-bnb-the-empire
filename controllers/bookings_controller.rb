@@ -12,9 +12,16 @@ class MakersBnB < Sinatra::Base
   end
 
   get '/requests' do
-    @requests_made = Booking.retrieve_requests_made(user_id: session[:user_id])
-    @requests_received = Booking.retrieve_requests_received(host_id: session[:user_id])
-    erb :requests
+    @user = User.find(id: session[:user_id])
+
+    if @user
+      @requests_made = Booking.retrieve_requests_made(user_id: session[:user_id])
+      @requests_received = Booking.retrieve_requests_received(host_id: session[:user_id])
+      erb :requests
+    else
+      flash[:notice] = 'Please login to view requests'
+      redirect '/sessions/new'
+    end
   end
 
   patch '/requests/:id' do
@@ -28,8 +35,15 @@ class MakersBnB < Sinatra::Base
   end
 
   get '/confirmed_bookings' do
-    @bookings_guest = Booking.retrieve_confirmed_bookings(host_or_guest: "guest", user_id: session[:user_id])
-    @bookings_host = Booking.retrieve_confirmed_bookings(host_or_guest: "host", user_id: session[:user_id])
-    erb :confirmed_bookings
+    @user = User.find(id: session[:user_id])
+
+    if @user
+      @bookings_guest = Booking.retrieve_confirmed_bookings(host_or_guest: "guest", user_id: session[:user_id])
+      @bookings_host = Booking.retrieve_confirmed_bookings(host_or_guest: "host", user_id: session[:user_id])
+      erb :confirmed_bookings
+    else
+      flash[:notice] = 'Please login to view bookings'
+      redirect '/sessions/new'
+    end
   end
 end

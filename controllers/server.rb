@@ -7,7 +7,13 @@ class MakersBnB < Sinatra::Base
   register Sinatra::Flash
 
   get '/' do
-    erb(:index)
+    @user = User.find(id: session[:user_id])
+
+    if @user
+      redirect '/dashboard'
+    else
+      erb(:index)
+    end
   end
 
   get  '/dashboard' do

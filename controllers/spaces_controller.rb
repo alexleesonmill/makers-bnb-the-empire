@@ -2,6 +2,7 @@ require_relative '../lib/spaces'
 require_relative '../lib/user'
 
 class MakersBnB < Sinatra::Base
+
   get '/listings' do
     @user = User.find(id: session[:user_id])
 
