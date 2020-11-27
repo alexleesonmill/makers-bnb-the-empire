@@ -27,4 +27,34 @@
 
 #### CRC Diagram
 
-![image](https://user-images.githubusercontent.com/65397514/99977050-1a0ade00-2d9c-11eb-9337-45c21ff18eb6.png)
+<figure>
+    ![image](https://user-images.githubusercontent.com/65397514/99977050-1a0ade00-2d9c-11eb-9337-45c21ff18eb6.png)
+    <figcaption></figcaption>
+</figure>
+
+#### Class Diagram
+<figure>
+    <img width="1074" alt="Screenshot 2020-11-24 at 10 58 46" src="https://user-images.githubusercontent.com/65397514/100459237-0b366b00-30bd-11eb-8e54-a302d2d1017d.png"/>
+    <figcaption><i>Initial Class Diagram created during the planning session, containing all three classes used.</i></figcaption>
+</figure>
+
+#### Flowchart as User/Host
+
+<figure>
+    <img width="751" alt="Screenshot 2020-11-24 at 11 24 37" src="https://user-images.githubusercontent.com/65397514/100459249-1093b580-30bd-11eb-9ddb-2d502e9da0be.png">
+    <figcaption><i>Flowchart representing the initial planning for a simple workflow of a host</i></figcaption>
+</figure>
+
+#### Flowchart as User/Guest
+
+<figure>
+    <img width="955" alt="Screenshot 2020-11-24 at 11 10 56" src="https://user-images.githubusercontent.com/65397514/100459255-12f60f80-30bd-11eb-9aba-868dff4cc1b3.png">
+    <figcaption><i>Flowchart representing the initial planning for a simple workflow of a guest</i></figcaption>
+</figure>
+
+## RSpec Testing Results and Coverage
+
+<figure>
+    <img width="430" alt="Screenshot 2020-11-27 at 14 41 24" src="https://user-images.githubusercontent.com/65397514/100460388-ff4ba880-30be-11eb-8a92-b5498e44462e.png">
+    <figcaption>RSpec Suite - Testing Results and Coverage</figcaption>
+</figure>
